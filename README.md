@@ -34,7 +34,7 @@ Abra el la carpeta cypress raíz de este proyecto con la herramienta cypress, pr
 
 | Funcionalidades | Escenarios | Descripción 	 |generacion|
 |-------------------------|---------------------------|---------------------------|-----------|
-| Crear un post       | 10 Escenarios crear un post como borrador con un pool de datos a-priori | Se realiza un login, se navega hasta los Post, se escribe un texto paramétrico en el post, se verifica que exista en la lista de post  ||
+| Crear un post       | 10 Escenarios de crear un post como borrador con un pool de datos a-priori | Se realiza un login, se navega hasta los Post, se escribe un texto paramétrico en el post, se verifica que exista en la lista de post  ||
 | Eliminar un post |Escenario 2 eliminar un post de borradores| Se realiza login, seleccionamos un post con titulo paramétrico en las opciones del mismo se realiza la eliminación. se verifica que corre sin defectos.||
 |Publicar un post |Escenario 3 publicar un post y verificarlo en la página|Se realiza login, se crea un post, se verifica el post en la lista, se ingresa nuevamente al post, se publica, se verifica que en la página principal se encuentre publicado||
 |Publicar un post |Escenario 4 verificar generar slug|Se realiza login, se selecciona un post publicado, se obtiene el link generado en la configuración, se visita dicho link y se verifica que el titulo corresponda a dicho link.||
