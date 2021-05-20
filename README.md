@@ -1,15 +1,16 @@
 # Introducción:
-Este proyecto de carácter educativo aplica pruebas E2E sobre un aplicativo web, las cuales validaron los escenarios tanto en Kraken, como en Cypress:
-1. El proyecto y analisis de Cypress se encuentra en este repositorio. 
-2. El analisis en Kraken se encuentra en el repositorio: https://github.com/johanCarvajalAndes/pruebasKrakenAndes/blob/main/README.md
+Este proyecto de carácter educativo aplica pruebas E2E sobre un aplicativo web, las cuales validaron los escenarios  en Cypress bajo datos generados automaticamente de 3 tipos:
+    1. pool de datos a-priori 
+    2. pool de datos (pseudo) aleatorio dinámico 
+    3. Escenario aleatorio.
 
 # PruebasGhostE2E
 Entrega de Pruebas E2E andes
 
 
 ## Pre Requisitos: 
-1. tener instalado Cypress : https://www.cypress.io/
-2. Ghost: https://ghost.org/docs/install/
+1. tener instalado Cypress : https://www.cypress.io/ v. 7.3.0
+2. Ghost: https://ghost.org/docs/install/ v. 3.42.5
 3. Crear un usuario administrador en Ghost
 
 ## Configuración inicial:
@@ -26,6 +27,7 @@ Entrega de Pruebas E2E andes
 
 
 * __Nota__: El parametro __User__ es el username asignado por Ghost al momento de crear el usuario de login.
+
 ## Ejecutar
 Abra el la carpeta cypress raíz de este proyecto con la herramienta cypress, presione Run integration spect que aparece en la pantalla y listo. todos los espect correrán de forma automática.
 
@@ -34,7 +36,7 @@ Abra el la carpeta cypress raíz de este proyecto con la herramienta cypress, pr
 
 | Funcionalidades | Escenarios | Descripción 	 |generacion|tipo|
 |-------------------------|---------------------------|---------------------------|-----------|-------|
-| Crear un post       | 10 Escenarios de Crear un post como borrador con un pool de datos a-priori | Se realiza un login, se navega hasta los Post, se escribe un texto precargado en el post, se verifica que exista en la lista de post, se elimina el post |||
+| Crear un post       | 10 Escenarios de Crear un post como borrador con un pool de datos a-priori | Se realiza un login, se navega hasta los Post, se escribe un texto precargado en el post, se verifica que exista en la lista de post, se elimina el post ||pool de datos a-priori  de escenarios positivos|
 | Eliminar un post |Escenario 2 eliminar un post de borradores| Se realiza login, seleccionamos un post con titulo paramétrico en las opciones del mismo se realiza la eliminación. se verifica que corre sin defectos.|||
 |Publicar un post |Escenario 3 publicar un post y verificarlo en la página|Se realiza login, se crea un post, se verifica el post en la lista, se ingresa nuevamente al post, se publica, se verifica que en la página principal se encuentre publicado|||
 |Publicar un post |Escenario 4 verificar generar slug|Se realiza login, se selecciona un post publicado, se obtiene el link generado en la configuración, se visita dicho link y se verifica que el titulo corresponda a dicho link.|||
