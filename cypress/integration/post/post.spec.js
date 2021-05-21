@@ -1,6 +1,7 @@
 /// <reference types="cypress" />
 import { login, goToPostPublished,configPost,verifySlug,verifyUserListPost,verifyUrlPost,verifyPageOnePost,newPostPage,deletePost,retuntToPost, showPublishPost,verifyPostTitle,publicPost,newPostTitle,returnPostList,verifyPostTitleinWeb, selectPost } from "./listFuction.js";
 import {Email, Password} from '../credencia'
+
 context("Post Escenarios", () => {
   let title;
   let email = Email;
@@ -11,7 +12,7 @@ context("Post Escenarios", () => {
     title= "lapruebaRegresion"
     login(cy,email,password);
   });
-
+  
   it("Given: Estando loggeado exitosamente en la aplicación."+ 
   "WHEN ir a la pagina de crear new Post" +
   "WHEN escribir el titulo" +
@@ -30,7 +31,7 @@ context("Post Escenarios", () => {
     verifyPostTitle(cy, title,escenario)
     
   });
-it("Given: Estando loggeado exitosamente en la aplicación."+ 
+/*it("Given: Estando loggeado exitosamente en la aplicación."+ 
 "WHEN seleccionar el post" +
 "WHEN ir a configuraciones del post" +
 "THEN: eliminar el post.", () => {
@@ -101,6 +102,6 @@ it("Given: Estando loggeado exitosamente en la aplicación."+
  //THEN eliminar el post
   deletePost(cy,escenario)
  
-});
+});*/
 
 });
