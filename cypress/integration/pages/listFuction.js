@@ -7,18 +7,28 @@ export function login(cy,email,password) {
     cy.get(".login").click();
   }
   export function newPage(cy) {
-    cy.get('a[href="#/pages/"]').click({ force: true });
-    cy.get('a[href="#/editor/page/"]').click({ force: true });
+    cy.get('a[href="#/pages/"]').click({ multiple: true });
+    cy.wait(5000)
+    cy.visit(Url+"/ghost/#/editor/page")
+    //cy.get('a[href="#/editor/page/"]').click({ force: true });
   }
   export function newPageTitle(cy, title) {
     cy.get('textarea[tabindex="1"]').type(title);
     cy.get('div[data-kg="editor"]').click();
   }
+  // export function newBodyPage(cy, body) {
+  //   cy.get( ".koenig-editor__editor.__mobiledoc-editor.__has-no-content").click();
+  //   cy.get('article[data-kg-has-link-toolbar="true"]').type("buenas");
+
+  //   cy.wait(9000)
+  //   cy.get('div[data-kg="editor"]').click();
+  // }
 
   export function newPageContent(cy, text) {
     cy.get('div[data-kg="editor"]').type(text);
   }
   export function returnPageList(cy) {
+
     cy.get('a[href="#/pages/"]').click({ force: true });
   }
   export function verifyPageTitle(cy, title) {
@@ -26,6 +36,7 @@ export function login(cy,email,password) {
   }
   export function selectPage(cy, title) {
     cy.get('a[href="#/pages/"]').click({ force: true });
+    cy.wait(5000)
     cy.get("h3").contains(title).click({ force: true });
   }
   export function configurationPage(cy){
@@ -48,6 +59,7 @@ export function login(cy,email,password) {
   }
 
   export function returnToPage(cy,title){
+    cy.wait(5)
     cy.get("h3").contains(title).click({ force: true });
   }
 
