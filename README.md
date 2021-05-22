@@ -12,6 +12,8 @@ Entrega de Pruebas E2E andes
 1. tener instalado Cypress : https://www.cypress.io/ v. 7.3.0
 2. Ghost: https://ghost.org/docs/install/ v. 3.42.5
 3. Crear un usuario administrador en Ghost
+4. Tener instalado faker o ejecutar el comando __npm install faker__ en la raiz del proyecto.
+
 
 ## Configuración inicial:
 
