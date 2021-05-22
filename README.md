@@ -24,6 +24,8 @@ Entrega de Pruebas E2E andes
         export const Password = "mfYyHi8q.Mix@r#"
         export const Url = "http://localhost:2368"
         export const User= "Johan"
+        export const numberScenarios = 8;
+
 
 
 * __Nota__: El parametro __User__ es el username asignado por Ghost al momento de crear el usuario de login.
