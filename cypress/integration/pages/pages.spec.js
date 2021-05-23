@@ -16,7 +16,7 @@ import {
   returnToPage,
   visitPages,
 } from "./listFuction.js";
-import { Email, Password, User } from "../credencia";
+import { Email, Password, User, numberScenariosPages } from "../credencia";
 
 context("Page Escenarios", () => {
   let title;
@@ -51,7 +51,7 @@ context("Page Escenarios", () => {
     title = [];
   });
   
-  for (let i = 0; i < numberScenarios; i++) {
+  for (let i = 0; i < numberScenariosPages; i++) {
     it(
       "Given: Estando loggeado exitosamente en la aplicacion. WHEN: proceso a la seccion de pages. " +
         "THEN: creo una nueva Page borrador.",
