@@ -50,6 +50,15 @@ export function returnPostList(cy, escenario) {
   }
 }
 
+export function verifyMessageToLong(cy,escenario){
+  cy.wait(3000);
+  if(escenario!=='NO'){
+    cy.screenshot(escenario)
+  }
+  cy.get(".main-error").contains('The tilte is to Loog')
+ 
+}
+
 export function selectPost(cy, title, escenario) {
   cy.get('a[href="#/posts/"]').click({ force: true });
 

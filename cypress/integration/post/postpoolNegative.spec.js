@@ -1,13 +1,9 @@
 /// <reference types="cypress" />
 import {
   login,
-  configPost,
   newPostPage,
-  deletePost,
-  verifyPostTitle,
   newPostTitle,
-  returnPostList,
-  selectPost,
+  verifyMessageToLong
 } from "./listFuction.js";
 import { Email, Password } from "../credencia";
 import { Scenary } from "../pool/a-priori/data_post.js";
@@ -28,36 +24,18 @@ Scenary.forEach((post) => {
     it(
       "Given: Estando loggeado exitosamente en la aplicación." +
         "WHEN ir a la pagina de crear new Post" +
-        "WHEN escribir el titulo y el cuerpo" +
-        "WHEN volver a lista de post" +
-        "THEN: verificar post en lista de post.",
+        "WHEN escribir el titulo muy largo y el cuerpo" +
+        "THEN: Then verificar que existe el mensaje de error.",
       () => { 
         //capturar screenshot
         escenario = "NO";
         //WHEN ir a la pagina de crear new Post
         newPostPage(cy, escenario);
-        //WHEN escribir el titulo y el cuerpo
+        //WHEN escribir el titulo muy largo y el cuerpo
         newPostTitle(cy, title,body, escenario);
-        //WHEN volver a lista de post
-        returnPostList(cy, escenario);
-        //THEN verificar post en lista de post
-        verifyPostTitle(cy, title, escenario);
-      }
-    );
-    it(
-      "Given: Estando loggeado exitosamente en la aplicación." +
-        "WHEN seleccionar el post" +
-        "WHEN ir a configuraciones del post" +
-        "THEN: eliminar el post.",
-      () => {
-        //capturar screenshot
-        escenario = "NO";
-        //WHEN seleccionar el post
-        selectPost(cy, title, escenario);
-        // WHEN ir a configuraciones del post
-        configPost(cy, escenario);
-        //THEN eliminar el post
-        deletePost(cy, escenario);
+        //Then verificar que existe el mensaje de error 
+        verifyMessageToLong(cy,escenario)
+     
       }
     );
 
