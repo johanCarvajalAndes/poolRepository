@@ -13,7 +13,8 @@ Entrega de Pruebas E2E andes
 2. Ghost: https://ghost.org/docs/install/ v. 3.42.5
 3. Crear un usuario administrador en Ghost
 4. Tener instalado faker o ejecutar el comando __npm install faker__ en la raiz del proyecto.
-5. Tener instalado el modulo request de python : pip install requests
+5. Tener instalado el modulo request de python : pip install requests o en la raiz del proyecto ejecutar pipenv install
+para descargar las dependencias.
 
 
 ## Configuración inicial:
