@@ -3,6 +3,10 @@ Este proyecto de carácter educativo aplica pruebas E2E sobre un aplicativo web,
     1. pool de datos a-priori 
     2. pool de datos (pseudo) aleatorio dinámico 
     3. Escenario aleatorio.
+    
+## Issues
+
+Las insidencias identificadas por el equipo de pruebas se encuentran reportadas en el proyecto Bug Reporter de este mismo repositorio [Ver Issues](https://github.com/johanCarvajalAndes/poolRepository/projects/1)
 
 # PruebasGhostE2E
 Entrega de Pruebas E2E andes
@@ -48,6 +52,5 @@ Abra el la carpeta cypress raíz de este proyecto con la herramienta cypress, pr
 | Crear un post       | 20 Escenarios de Crear un post como borrador con un titulo de mas de 70 caracteres con pool de datos a-priori | Se realiza un login, se navega hasta los Post, se escribe un texto precargado en el post, se verifica que exista un mensaje de titulo demasiado largo. |[Ver-generacion](https://github.com/johanCarvajalAndes/poolRepository/wiki/CREAR-POSTS-COMO-BORRADOR-NEGATIVO)|pool de datos a-priori  de escenarios negativos|
 | Login  |10 Escenarios de Login con un pool de datos a-priori| Se digitan campos en email y contraseña y se valida la retroalimentacion|[Ver-generacion](https://github.com/johanCarvajalAndes/poolRepository/wiki/Login)|pool de datos a-priori de escenarios positivos|
 | Crear una página   | 40 Escenarios de Crear una pagina como borrador, publicarla y eliminarla con un pool de datos pseudo-aleatorio dinámico. | Se realiza un login, se navega hasta las paginas, se escribe un titulo el header de la pagina y se verifica que exista en la lista de pages |[Ver-generacion](https://github.com/johanCarvajalAndes/poolRepository/wiki/PageData)|pool de datos pseudo-aleatorio dinamico escenarios positivos.|
-|Crear Tag |40 Escenarios de creación y validación de tags en post y pages. | Se realiza el login, se direciona a tags se diligencia el nombre y el slug y se guarda|[Ver-generacion](https://github.com/johanCarvajalAndes/poolRepository/wiki/TagData)|pseudo-aleatorio dinamico|
-|Configuraciones generales| 40 Escenarios para probar el menu General Settings con un pool de datos aleatorios usando Fakerjs.|Se realiza edicion y mverificacion de diferentes configuraciones disponibles del sistema de configuraciones generales|[Ver generación](https://github.com/johanCarvajalAndes/poolRepository/wiki/Pool-de-datos-aleatorios)|Tipo de dato aleatorio|
-
+|Crear Tag |40 Escenarios de creación y validación de tags en post y pages. | Se realiza el login, se direciona a tags se diligencia el nombre y el slug y se guarda|[Ver-generacion](https://github.com/johanCarvajalAndes/poolRepository/wiki/TagData)|pseudo-aleatorio dinamico escenarios positivos|
+|Configuraciones generales| 40 Escenarios para probar el menu General Settings con un pool de datos aleatorios usando Fakerjs.|Se realiza edicion y mverificacion de diferentes configuraciones disponibles del sistema de configuraciones generales|[Ver generación](https://github.com/johanCarvajalAndes/poolRepository/wiki/Pool-de-datos-aleatorios)|Tipo de dato aleatorio escenarios positivos|
