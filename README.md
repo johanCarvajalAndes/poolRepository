@@ -33,6 +33,7 @@ Entrega de Pruebas E2E andes
 * __Nota__: El parametro __User__ es el username asignado por Ghost al momento de crear el usuario de login.
 
 ## Ejecutar
+Para la generación de datos con la api de mockaroo, correr el archivo MockarooApi.py con el fin de hacer un get a la api y traer los datos al json datos.json. Este paso es necesario solo hacerlo una vez.
 Abra el la carpeta cypress raíz de este proyecto con la herramienta cypress, presione Run integration spect que aparece en la pantalla y listo. todos los espect correrán de forma automática.
 
 ## Tabla de funcionalidades y Escenarios:
