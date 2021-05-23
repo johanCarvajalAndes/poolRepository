@@ -20,8 +20,9 @@ import { Email, Password, User, numberScenariosPages } from "../credencia";
 
 context("Page Escenarios", () => {
   let title;
-  let body;
+  let body =[];
   let datos = [];
+  let bodies = [];
 
   let author = User; //aca se debe indicar el nombre de usuario del perfil de ghost
   let email = Email;
@@ -36,9 +37,13 @@ context("Page Escenarios", () => {
     cy.fixture("datos.json").as("gifts").then((x) => {
       cy.get(x).each(($els, index, $list)=>
       {
-      
-        datos.push($els.title); 
-       
+        datos.push($els.title)
+    
+      })
+      cy.get(x).each(($els, index, $list)=>
+      {
+        bodies.push($els.bodyPage)
+    
       })
     })
    
@@ -51,6 +56,7 @@ context("Page Escenarios", () => {
     title = [];
   });
   
+  
   for (let i = 0; i < numberScenariosPages; i++) {
     it(
       "Given: Estando loggeado exitosamente en la aplicacion. WHEN: proceso a la seccion de pages. " +
@@ -58,11 +64,8 @@ context("Page Escenarios", () => {
       () => {
         //ir a la pagina de crear una nueva pagina
         newPage(cy);
-        
         //escribir el titulo de la pagina correspondiente
-        newPageTitle(cy, datos[i]);
-        //rellenar el cuerpo de la pagina
-        //newBodyPage(cy, body);
+        newPageTitle(cy, datos[i],bodies[i]);
         //Regresar al home de paginas
         returnPageList(cy);
         //verificación de que quedara el borrador de la pagina
@@ -91,7 +94,7 @@ context("Page Escenarios", () => {
         //ir a la pagina de crear new Post
         newPage(cy);
         //escribir el titulo
-        newPageTitle(cy, datos[i]);
+        newPageTitle(cy, datos[i],bodies[i]);
         //volver a lista de paginas
         returnPageList(cy);
         //Ingresar a la pagina creada
