@@ -4,20 +4,20 @@ export function login(cy,url,email,password) {
   cy.get(".password").type(password);
   cy.get(".login").click();
 }
-export function Tag(cy,url,title) {  
+export function Tag(cy) {  
   cy.get('a[href="#/tags/"]').click({ force: true });
 }
 
-export function newTag(cy,url,title) {  
+export function newTag(cy) {  
   cy.get('a[href="#/tags/new/"]').click({ force: true });
   
 }
 
-export function formTag(cy,title) {  
+export function formTag(cy,title,slug) {  
   cy.get('input[name=name]').click({ force: true });
   cy.get('input[name=name]').type(title);
   cy.get('input[name=slug]').click({ force: true });
-  cy.get('input[name=slug]').type(title);
+  cy.get('input[name=slug]').type(slug);
   //cy.get('button[class="gh-btn gh-btn-blue gh-btn-icon ember-view"]').click({ force: true });
 }
 
