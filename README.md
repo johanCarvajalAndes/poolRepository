@@ -13,7 +13,8 @@ Entrega de Pruebas E2E andes
 2. Ghost: https://ghost.org/docs/install/ v. 3.42.5
 3. Crear un usuario administrador en Ghost
 4. Tener instalado faker o ejecutar el comando __npm install faker__ en la raiz del proyecto.
-5. Tener instalado el modulo request de python : pip install requests
+5. Tener instalado el modulo request de python : pip install requests o en la raiz del proyecto ejecutar pipenv install
+para descargar las dependencias.
 
 
 ## Configuración inicial:
@@ -54,7 +55,7 @@ Abra el la carpeta cypress raíz de este proyecto con la herramienta cypress, pr
 |Publicar una página |Escenario 9 publicar una página y verificar en la parte inferior de la página su publicación|Se realiza login, se crea una página, se verifica la página en la lista, se ingresa nuevamente a la página, se publica, se verifica que en la página principal se encuentre publicado.|[Ver-generacion](https://github.com/johanCarvajalAndes/poolRepository/wiki/PageData)||
 |Verificar el autor de una página |Escenario 10 publicar una página y verificar en la parte superior derecha en las configuraciones de la página su creador|Se realiza login, se crea una página, se verifica la página en la lista, se ingresa nuevamente a la página, se verifica en las configuraciones en la página principal superior derecha se encuentre el respectivo creador parametrizado.|[Ver-generacion](https://github.com/johanCarvajalAndes/poolRepository/wiki/PageData)||
 |Validar la existencia del link de una pagina luego de creada|Escenario 11 publicar una página y verificar la existencia de la publicación|Se realiza login, se crea una página, se verifica la página en la lista, se ingresa nuevamente a la página, se accede a configuraciones en la parte superior derecha y se accede al link creado.|[Ver-generacion](https://github.com/johanCarvajalAndes/poolRepository/wiki/PageData)||
-|Crear Tag |Escenario 12 creacion de tags | Se realiza el login, se direciona a tags se diligencia el nombre y el slug y se guarda|||
+|Crear Tag |Escenario 12 creacion de tags | Se realiza el login, se direciona a tags se diligencia el nombre y el slug y se guarda|[Ver-generacion](https://github.com/johanCarvajalAndes/poolRepository/wiki/TagData)|pseudo-aleatorio dinamico|
 |Validar Tag Post |Escenario 13 validacion de tags en post| Se realiza el login, se direciona a post, se ingresa a la pagina welcome, se ingresa a los settigns y se seleciona el yag creado.|||
 |Validar Tag Page |Escenario 14 validacion de tags en post| Se realiza el login, se direciona a page, se ingresa una Page, se ingresa a los settigns y se seleciona el tag creado.|||
 |Eliminar Tag |Escenario 15 Eliminacion de tags| Se realiza el login, se direciona a tags, se seleciona uno, se selecciona la opcion de eliminar, luego de confirmar y se retorna al listado de tags|||

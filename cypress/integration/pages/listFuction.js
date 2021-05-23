@@ -12,17 +12,12 @@ export function login(cy,email,password) {
     cy.visit(Url+"/ghost/#/editor/page")
     //cy.get('a[href="#/editor/page/"]').click({ force: true });
   }
-  export function newPageTitle(cy, title) {
-    cy.get('textarea[tabindex="1"]').type(title);
+  export function newPageTitle(cy, title,body) {
+    cy.get('textarea[tabindex="1"]').type(title+'\n\n'+body);
+
     cy.get('div[data-kg="editor"]').click();
   }
-  // export function newBodyPage(cy, body) {
-  //   cy.get( ".koenig-editor__editor.__mobiledoc-editor.__has-no-content").click();
-  //   cy.get('article[data-kg-has-link-toolbar="true"]').type("buenas");
 
-  //   cy.wait(9000)
-  //   cy.get('div[data-kg="editor"]').click();
-  // }
 
   export function newPageContent(cy, text) {
     cy.get('div[data-kg="editor"]').type(text);
