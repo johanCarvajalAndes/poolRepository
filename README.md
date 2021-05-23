@@ -13,6 +13,7 @@ Entrega de Pruebas E2E andes
 2. Ghost: https://ghost.org/docs/install/ v. 3.42.5
 3. Crear un usuario administrador en Ghost
 4. Tener instalado faker o ejecutar el comando __npm install faker__ en la raiz del proyecto.
+5. Tener instalado el modulo request de python : pip install requests
 
 
 ## Configuración inicial:
@@ -27,6 +28,7 @@ Entrega de Pruebas E2E andes
         export const Url = "http://localhost:2368"
         export const User= "Johan"
         export const numberScenarios = 8;
+        export const numberScenariosPages = 16;
 
 
 
